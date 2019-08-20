@@ -21,21 +21,8 @@ document.getElementById("backBtn").addEventListener("click", function () {
     document.getElementById("footer").style.opacity = "1";
 });
 
-document.getElementById("eplBtn").addEventListener("click", function () {
-    displayLeague();
-    leagueImage.setAttribute("src", "./premier.png");
-    let eplTeamList = storage.getListFromStorage("eplTeamList");
-    ui.displayTeamList(eplTeamList);
-    setClickEventForTeams();
-});
-
-document.getElementById("ligaBtn").addEventListener("click", function () {
-    displayLeague();
-    leagueImage.setAttribute("src", "./laliga.png");
-    let ligaTeamList = storage.getListFromStorage("ligaTeamList");
-    ui.displayTeamList(ligaTeamList);
-    setClickEventForTeams();
-});
+setEventEplClick();
+setEventLigaClick();
 
 function displayLeague() {
     btnWrapper.style.opacity = "0";
@@ -138,4 +125,38 @@ function setClickEventSquadBtn(team, squad) {
     document.getElementById("squadBtn").addEventListener("click", function () {
         ui.displaySquad(team, squad);
     })
+}
+
+function setEventEplClick() {
+    document.getElementById("eplBtn").addEventListener("click", function () {
+        displayLeague();
+        leagueImage.setAttribute("src", "./premier.png");
+        let eplTeamList = storage.getListFromStorage("eplTeamList");
+        ui.displayTeamList(eplTeamList);
+        setClickEventForTeams();
+    });
+    document.getElementById("eplBtnImg").addEventListener("click", function () {
+        displayLeague();
+        leagueImage.setAttribute("src", "./premier.png");
+        let eplTeamList = storage.getListFromStorage("eplTeamList");
+        ui.displayTeamList(eplTeamList);
+        setClickEventForTeams();
+    });
+}
+
+function setEventLigaClick() {
+    document.getElementById("ligaBtn").addEventListener("click", function () {
+        displayLeague();
+        leagueImage.setAttribute("src", "./laliga.png");
+        let ligaTeamList = storage.getListFromStorage("ligaTeamList");
+        ui.displayTeamList(ligaTeamList);
+        setClickEventForTeams();
+    });
+    document.getElementById("ligaBtnImg").addEventListener("click", function () {
+        displayLeague();
+        leagueImage.setAttribute("src", "./laliga.png");
+        let ligaTeamList = storage.getListFromStorage("ligaTeamList");
+        ui.displayTeamList(ligaTeamList);
+        setClickEventForTeams();
+    });
 }
