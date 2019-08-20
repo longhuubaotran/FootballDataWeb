@@ -205,7 +205,7 @@ class UI {
           </li>
           <li class="list-group-item">
             Dribbles Total:
-            <span class="badge badge-pill badge-secondary"> ${player.dribbles.attemps}</span> |
+            <span class="badge badge-pill badge-secondary"> ${player.dribbles.attempts}</span> |
             Success:
             <span class="badge badge-pill badge-success"> ${player.dribbles.success}</span>
           </li>
@@ -221,7 +221,7 @@ class UI {
           </li>
           <li class="list-group-item">
             Appearances:
-            <span class="badge badge-pill badge-primary"> ${player.games.appearances}</span> |
+            <span class="badge badge-pill badge-primary"> ${player.games.appearences}</span> |
             Minutes-played:
             <span class="badge badge-pill badge-secondary"> ${player.games.minutes_played}</span> |
             Lineups:
