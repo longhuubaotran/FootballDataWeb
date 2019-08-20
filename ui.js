@@ -220,7 +220,7 @@ class UI {
             Missed: <span class="badge badge-pill badge-danger"> ${player.penalty.missed}</span>
           </li>
           <li class="list-group-item">
-            Appearances:
+            Appearences:
             <span class="badge badge-pill badge-primary"> ${player.games.appearences}</span> |
             Minutes-played:
             <span class="badge badge-pill badge-secondary"> ${player.games.minutes_played}</span> |
@@ -240,6 +240,7 @@ class UI {
       </div> 
         `;
     setEventBackSquadBtn();
+    console.log(player);
   }
 
 }
