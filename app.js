@@ -43,7 +43,7 @@ function displayTeamInfo() {
     btnWrapper.style.pointerEvents = "none";
     leagueList.style.opacity = "0";
     leagueList.style.pointerEvents = "none";
-    // document.getElementById("footer").style.opacity = "0";
+    document.getElementById("footer").style.opacity = "0";
     TweenMax.fromTo("#teamInfo", 1, {
         opacity: "0",
     }, {
