@@ -15,10 +15,10 @@ document.getElementById("backBtn").addEventListener("click", function () {
         opacity: "1",
         ease: Power2.easeInOut
     })
-    // btnWrapper.style.opacity = "1";
     btnWrapper.style.pointerEvents = "auto";
     leagueList.style.opacity = "0";
     leagueList.style.pointerEvents = "none";
+    document.getElementById("footer").style.opacity = "1";
 });
 
 document.getElementById("eplBtn").addEventListener("click", function () {
@@ -40,6 +40,7 @@ document.getElementById("ligaBtn").addEventListener("click", function () {
 function displayLeague() {
     btnWrapper.style.opacity = "0";
     btnWrapper.style.pointerEvents = "none";
+    document.getElementById("footer").style.opacity = "0";
     TweenMax.fromTo(leagueList, 1, {
         opacity: "0",
     }, {
@@ -55,6 +56,7 @@ function displayTeamInfo() {
     btnWrapper.style.pointerEvents = "none";
     leagueList.style.opacity = "0";
     leagueList.style.pointerEvents = "none";
+    document.getElementById("footer").style.opacity = "0";
     TweenMax.fromTo("#teamInfo", 1, {
         opacity: "0",
     }, {

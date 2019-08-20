@@ -1,108 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/67e43071fc.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <title>FiFa</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/67e43071fc.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-  <title>FiFa</title>
-</head>
-
-<body>
-  <div class="container main-page">
-    <!-- Choose League -->
-    <div class="d-flex justify-content-around align-items-center btn-wrapper" id="btnWrapper">
-      <img src="./premierbtn.png" alt="premier" class="img-fluid d-none" id="eplBtn" />
-      <img src="./ligalogobtn.png" alt="liga" class="img-fluid d-none" id="ligaBtn" />
-      <button class="btn aqua-gradient" id="eplBtn">Premier League</button>
-      <button class="btn blue-gradient" id="ligaBtn">La liga</button>
-    </div>
-
-    <!-- League List -->
-    <div class="card mx-auto mt-5" id="leagueList">
-      <img src="" alt="premier" class="card-img-top" id="leagueImage" />
-      <div class="card-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="d-flex flex-column justify-content-center align-items-center team-list" id="teamListLeft">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex flex-column justify-content-center align-items-center team-list" id="teamListRight">
-              </div>
-            </div>
-          </div>
-          <button class="btn btn-outline-light shadow-none" id="backBtn">
-            <i class="fas fa-home"></i> Back
-          </button>
-        </div>
+  <body>
+    <div class="container main-page">
+      <!-- Choose League -->
+      <div
+        class="d-flex justify-content-around align-items-center btn-wrapper"
+        id="btnWrapper"
+      >
+        <img
+          src="./premierbtn.png"
+          alt="premier"
+          class="img-fluid d-none"
+          id="eplBtn"
+        />
+        <img
+          src="./ligalogobtn.png"
+          alt="liga"
+          class="img-fluid d-none"
+          id="ligaBtn"
+        />
+        <button class="btn aqua-gradient" id="eplBtn">Premier League</button>
+        <button class="btn blue-gradient" id="ligaBtn">La liga</button>
       </div>
-    </div>
 
-    <!-- Team Information -->
-    <div class="card mx-auto mt-5" id="teamInfo">
-      <div class="card-body">
-        <div class="container">
-          <div class="row">
-            <!-- List of choices -->
-            <div class="col-md-3" id="userChoices">
-              <img src="" alt="" class="img-fluid mb-4" id="teamLogo" />
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <a href="#" class="team-link" id="infoBtn">Info</a>
-                </li>
-                <li class="list-group-item">
-                  <a href="#" class="team-link" id="squadBtn">Squad</a>
-                </li>
-                <li class="list-group-item">
-                  <a href="#" class="team-link" id="transferBtn">Transfer</a>
-                </li>
-              </ul>
-              <button class="btn btn-outline-light waves-effect shadow-none" id="backTeamBtn">
-                <i class="fas fa-chevron-left"></i> Team List
-              </button>
+      <!-- League List -->
+      <div class="card mx-auto mt-5" id="leagueList">
+        <img src="" alt="premier" class="card-img-top" id="leagueImage" />
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center team-list"
+                  id="teamListLeft"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center team-list"
+                  id="teamListRight"
+                ></div>
+              </div>
             </div>
-
-            <!-- Display choices -->
-            <div class="col-md-9" id="displayChoices"></div>
+            <button class="btn btn-outline-light shadow-none" id="backBtn">
+              <i class="fas fa-home"></i> Back
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- Team Information -->
+      <div class="card mx-auto mt-5" id="teamInfo">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <!-- List of choices -->
+              <div class="col-md-3" id="userChoices">
+                <img src="" alt="" class="img-fluid mb-4" id="teamLogo" />
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <a href="#" class="team-link" id="infoBtn">Info</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="team-link" id="squadBtn">Squad</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#" class="team-link" id="transferBtn">Transfer</a>
+                  </li>
+                </ul>
+                <button
+                  class="btn btn-outline-light waves-effect shadow-none"
+                  id="backTeamBtn"
+                >
+                  <i class="fas fa-chevron-left"></i> Team List
+                </button>
+              </div>
+
+              <!-- Display choices -->
+              <div class="col-md-9" id="displayChoices"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player Information -->
+      <div class="card" id="playerInfoCard"></div>
     </div>
 
-    <!-- Player Information -->
-    <div class="card" id="playerInfoCard"></div>
-  </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small" id="footer">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2019 Copyright: <strong>Made By Long Tran</strong>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
-  <!-- Footer -->
-  <footer class="page-footer font-small">
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">
-      © 2019 Copyright: <strong>Made By Long Tran</strong>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-
-  <!-- Script -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-  </script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
-  <script src="./soccerApi.js"></script>
-  <script src="./storage.js"></script>
-  <script src="./ui.js"></script>
-  <script src="./app.js"></script>
-</body>
-
+    <!-- Script -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"
+    ></script>
+    <script src="./soccerApi.js"></script>
+    <script src="./storage.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>

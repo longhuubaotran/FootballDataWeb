@@ -261,6 +261,7 @@ function displayPlayerInfoPage() {
   // Hide team Info and display player Info
   document.getElementById("teamInfo").style.opacity = "0";
   document.getElementById("teamInfo").style.pointerEvents = "none";
+  document.getElementById("footer").style.opacity = "0";
   TweenMax.fromTo("#playerInfoCard", 1, {
     opacity: "0",
   }, {
