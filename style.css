@@ -126,6 +126,11 @@ body {
   margin: 1rem 1rem;
 }
 
+.page-footer {
+  font-size: 1rem !important;
+  letter-spacing: .1rem !important;
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .btn-wrapper button {
